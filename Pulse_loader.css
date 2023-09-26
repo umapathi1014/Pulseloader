@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(3,3,27);
+    display:grid;
+    place-items: center;
+}
+.container{
+    display:grid;
+    place-items: center;
+    width: auto;
+    height: auto;
+
+}
+.ring{
+    position: absolute;
+    width:0;
+    height: 0;
+    border: 2px solid #fff;
+    animation: ring 2s linear infinite;
+    border-radius: 50%;
+}
+.ring:nth-child(2){
+    animation-delay: -1s;
+}
+@keyframes ring{
+    100%{
+        width: 200px;
+        height: 200px;
+        opacity:0;
+    }
+}
